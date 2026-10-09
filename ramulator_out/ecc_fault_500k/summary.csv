@@ -1,0 +1,4 @@
+Config,ECC,DRAM model,Reads,ACT,PRE,REFab,Fault trials,Single-bit flips,Multi-bit flips,Corrected single-bit,Visible single-bit,Visible multi-bit,Detected uncorrectable,Raw single ratio,Raw multi ratio,Visible flip ratio,Cycles,Finding
+DDR4-3200AA-Fault-500K,off,DDR4,500000,499999,459935,80128,120192,59944,3617,0,59944,3617,0,0.498735,0.030094,0.528829,499999000,single-bit and multi-bit flips are visible
+DDR5-3200BN-Fault-500K,off,DDR5,500000,499999,421719,160718,26760,13460,805,0,13460,805,0,0.502990,0.030082,0.533072,499999000,single-bit and multi-bit flips are visible
+DDR5-3200BN-ECC-Fault-500K,on-die SBC/128b,DDR5,500000,499999,421719,160718,26760,13460,805,13460,0,805,805,0.502990,0.030082,0.030082,499999000,single-bit corrected; multi-bit uncorrectable

@@ -1,0 +1,29 @@
+[Ramulator::LoadStoreTrace] [info] Loading trace file /home/raftchen/workspace/gem5-ramulator2/ramulator_out/ddr4_refresh_window_500k/hammer_256ms.trace ...
+[Ramulator::LoadStoreTrace] [info] Loaded 128000 lines.
+Frontend:
+  impl: LoadStoreTrace
+
+MemorySystem:
+  impl: GenericDRAM
+  total_num_other_requests: 0
+  total_num_write_requests: 0
+  total_num_read_requests: 128000
+  memory_system_cycles: 307197600
+  DRAM:
+    impl: DDR4-VRR
+  AddrMapper:
+    impl: RoBaRaCoCh
+  Controller:
+    impl: Generic
+    id: Channel 0
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    ControllerPlugin:
+      impl: OracleRH
+    ControllerPlugin:
+      impl: CommandCounter
+
+
+

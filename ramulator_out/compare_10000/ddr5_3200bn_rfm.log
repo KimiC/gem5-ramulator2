@@ -1,0 +1,29 @@
+[Ramulator::LoadStoreTrace] [info] Loading trace file /home/raftchen/workspace/gem5-ramulator2/ramulator_out/compare_10000/hammer_ddr5_10000.trace ...
+[Ramulator::LoadStoreTrace] [info] Loaded 10000 lines.
+Frontend:
+  impl: LoadStoreTrace
+
+MemorySystem:
+  impl: GenericDRAM
+  total_num_other_requests: 0
+  total_num_write_requests: 0
+  total_num_read_requests: 10000
+  memory_system_cycles: 9999000
+  DRAM:
+    impl: DDR5
+  AddrMapper:
+    impl: RoBaRaCoCh
+  Controller:
+    impl: Generic
+    id: Channel 0
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    ControllerPlugin:
+      impl: DDR5RFM
+    ControllerPlugin:
+      impl: CommandCounter
+
+
+

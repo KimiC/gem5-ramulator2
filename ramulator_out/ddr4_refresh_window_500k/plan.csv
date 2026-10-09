@@ -1,0 +1,4 @@
+window_ms,multiplier,accesses,nrefi,trefi_us,accesses_per_trefi
+64,1,32000,9364,7.8,3.90
+128,2,64000,18728,15.6,7.80
+256,4,128000,37456,31.2,15.60

@@ -1,0 +1,5 @@
+| Refresh window | Attack rate | Injected reads | nREFI | tREFI | Accesses/tREFI | Exposure | Baseline ACT | Baseline REFab | VRR ACT | VRR REFab | VRR | Finding |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 64 ms | 500k/s | 32000 | 9364 | 7.8 us | 3.90 | 1x | 31999 | 16402 | 31999 | 16402 | 0 | No VRR |
+| 128 ms | 500k/s | 64000 | 18728 | 15.6 us | 7.80 | 2x | 63999 | 16402 | 63999 | 16402 | 14790 | VRR triggered |
+| 256 ms | 500k/s | 128000 | 37456 | 31.2 us | 15.60 | 4x | 127999 | 16402 | 127999 | 16402 | 29581 | VRR triggered |

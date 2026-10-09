@@ -1,0 +1,13 @@
+metric,value
+ecc,none
+tRH,4
+fault_probability,0.5
+victim_radius,1
+threshold_events,1602
+fault_trials,2403
+raw_bit_flips,1174
+corrected_bit_flips,0
+visible_bit_flips,1174
+detected_uncorrectable,0
+raw_flip_ratio,0.488556
+visible_flip_ratio,0.488556

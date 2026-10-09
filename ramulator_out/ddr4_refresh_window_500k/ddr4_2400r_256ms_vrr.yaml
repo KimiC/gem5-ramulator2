@@ -1,0 +1,42 @@
+Frontend:
+  impl: LoadStoreTrace
+  clock_ratio: 1
+  path: /home/raftchen/workspace/gem5-ramulator2/ramulator_out/ddr4_refresh_window_500k/hammer_256ms.trace
+
+MemorySystem:
+  impl: GenericDRAM
+  clock_ratio: 2400
+
+  DRAM:
+    impl: DDR4-VRR
+    org:
+      preset: DDR4_2Gb_x8
+      channel: 1
+      rank: 2
+    timing:
+      preset: DDR4_2400R
+      nREFI: 37456
+
+  Controller:
+    impl: Generic
+    Scheduler:
+      impl: FRFCFS
+    RefreshManager:
+      impl: AllBank
+    plugins:
+      - ControllerPlugin:
+          impl: OracleRH
+          tRH: 4
+          debug: false
+      - ControllerPlugin:
+          impl: CommandCounter
+          path: /home/raftchen/workspace/gem5-ramulator2/ramulator_out/ddr4_refresh_window_500k/ddr4_2400r_256ms_vrr.cmds
+          commands_to_count:
+            - ACT
+            - PRE
+            - RD
+            - REFab
+            - VRR
+
+  AddrMapper:
+    impl: RoBaRaCoCh
